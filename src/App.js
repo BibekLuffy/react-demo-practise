@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route } from "react-router";
+import { Link } from "react-router-dom";
+
+import TodoApp from "./TodoDemoApp/TodoApp";
+import MeetupApp from "./MeetupDemoApp/MeetupApp";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Link to="/" className="btn">
+        See Todo App
+      </Link>
+      <Link to="/meetup" className="btn">
+        See Meetup App
+      </Link>
+      <br />
+      <br />
+      <Route exact path="/">
+        <TodoApp />
+      </Route>
+      <Route path="/meetup">
+        <MeetupApp />
+      </Route>
     </div>
   );
 }
