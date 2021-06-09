@@ -11,8 +11,8 @@ const NewMeetup = () => {
     updateTodo({
       variables: {
         input: {
-          title: "A Very Captivating Post Title",
-          body: "Some interesting content.",
+          title: meetup.title,
+          body: meetup.description,
         },
       },
     });

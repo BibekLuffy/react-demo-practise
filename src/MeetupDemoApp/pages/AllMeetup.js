@@ -18,6 +18,9 @@ const AllMeetup = () => {
         },
       },
     },
+    onCompleted: (data) => {
+      console.log(data);
+    },
   });
 
   useEffect(() => {
